@@ -7,8 +7,8 @@ export default function Nav() {
       <div className="flex justify-center items-center w-full">
         <ul className="flex space-x-8 text-gray-400">
           <li className="text-black font-bold">Home</li>
-          <li>Products</li>
-          <li>About</li>
+          <Link href="/products">Products</Link>
+          <Link href="about">About</Link>
           <li>News</li>
           <li>Contact</li>
         </ul>
