@@ -10,8 +10,8 @@ export default function Hero() {
       <div className="flex mb-10">
         <div className="w-1/2 py-20">
           <h1 className="font-bold text-3xl">
-            Bringing Innovation to HealthCare Your Trusted Partner In Medical
-            Equipment{" "}
+            Bringing Innovation to <br /> HealthCare Your Trusted Partner In{" "}
+            <br /> Medical Equipment{" "}
           </h1>
           <p className="mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et
