@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import heroImage from "../assets/heroImage3.jpg";
 import SponsorCard from "./sponsorCard";
+import AboutUS from "./about";
 
 export default function Hero() {
   return (
@@ -44,6 +45,7 @@ export default function Hero() {
         </div>
       </div>
       <SponsorCard />
+      <AboutUS />
     </>
   );
 }
