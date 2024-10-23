@@ -1,14 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import heroImage from "../assets/heroImage3.jpg";
 import SponsorCard from "./sponsorCard";
 import AboutUS from "./about";
+import Products from "./products";
+import TestimonialCard from "./testimonials";
 
 export default function Hero() {
   return (
     <>
       <div className="flex mb-10">
-        <div className="w-1/2 py-20">
+        <div className="w-1/2 py-40">
           <h1 className="font-bold text-3xl">
             Bringing Innovation to <br /> HealthCare Your Trusted Partner In{" "}
             <br /> Medical Equipment{" "}
@@ -46,6 +50,8 @@ export default function Hero() {
       </div>
       <SponsorCard />
       <AboutUS />
+      <Products />
+      <TestimonialCard />
     </>
   );
 }
