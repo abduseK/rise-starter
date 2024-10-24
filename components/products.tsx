@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
-import img1 from "../assets/product1.jpg"; // Add your images here
+import img1 from "../assets/product1.jpg";
 import img2 from "../assets/product2.jpg";
 import img3 from "../assets/product3.jpg";
 import img4 from "../assets/product4.jpg";
@@ -33,28 +33,26 @@ export default function Products() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ea corrupti fugiat enim corporis quaerat natus error laudantium impedit facere ducimus et officiis aperiam itaque eveniet",
     },
     { src: img5, title: "Product 5", description: "This is product 5" },
-  ]; // Array of image imports with titles and descriptions
-  const [currentIndex, setCurrentIndex] = useState(0); // Track the current image index
-  const scrollRef = useRef(null); // Reference to the scroll container
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef(null);
 
-  // Pagination function
   const handleNext = () => {
     if (currentIndex < images.length - 1) {
       setCurrentIndex(currentIndex + 1);
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" }); // Scroll by 300px to the right
+      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
     }
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" }); // Scroll by 300px to the left
+      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
     }
   };
 
   return (
     <div className="w-full mt-10">
-      {/* Pagination Controls */}
       <div className="mb-5 item-end justify-end right-2 flex space-x-2">
         <button
           onClick={handlePrev}
@@ -71,12 +69,10 @@ export default function Products() {
           →
         </button>
       </div>
-
-      {/* Image Container */}
       <div
         ref={scrollRef}
         className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-hide space-x-5"
-        style={{ height: "350px" }} // Fixed height for the container
+        style={{ height: "350px" }}
       >
         {images.map((img, index) => (
           <div
@@ -88,7 +84,7 @@ export default function Products() {
             <Image
               src={img.src}
               alt={`Gallery image ${index + 1}`}
-              className="w-full h-[250px] object-cover rounded-md" // Image height fixed within the container
+              className="w-full h-[250px] object-cover rounded-md"
             />
             <div className="mt-2">
               <h3 className="font-bold text-lg">{img.title}</h3>
